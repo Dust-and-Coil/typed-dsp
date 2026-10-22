@@ -1,0 +1,13 @@
+[package]
+name = "typed-dsp"
+version = "1.0.0"
+authors = ["Dust & Coil Audio Laboratories"]
+edition = "2021"
+license = "MIT"
+description = "Strongly typed audio units (peak amplitude, dBFS level, linear gain, gain in dB) that can't hold NaN."
+readme = "README.md"
+repository = "https://github.com/Dust-and-Coil/typed-dsp"
+homepage = "https://github.com/Dust-and-Coil/typed-dsp"
+documentation = "https://docs.rs/typed-dsp"
+keywords = ["audio", "dsp", "decibels", "gain", "units"]
+categories = ["multimedia::audio"]
