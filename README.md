@@ -12,8 +12,7 @@ Strongly typed audio units for Rust DSP code.
 ## Why two decibel types
 
 `LevelDbfs` is an absolute signal level. `GainDb` is a relative change in
-level. Both are in decibels, but mixing them up is a common bug, so the
-operators keep them apart:
+level. Both are in decibels, and each operation produces the correct type:
 
 ```text
 LevelDbfs - LevelDbfs -> GainDb
