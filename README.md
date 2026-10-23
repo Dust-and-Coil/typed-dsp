@@ -23,6 +23,8 @@ let correction = TARGET - peak;
 assert!((correction.to_linear().get() - 0.63).abs() < 0.01);
 ```
 
+It's `no_std`, with float math from [libm](https://crates.io/crates/libm).
+
 ## License
 
 Licensed under [MIT license](LICENSE-MIT).

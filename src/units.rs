@@ -167,11 +167,11 @@ fn decibel_difference(a: f32, b: f32) -> f32 {
 }
 
 fn amplitude_to_db(amplitude: f32) -> f32 {
-    20.0 * amplitude.log10()
+    20.0 * libm::log10f(amplitude)
 }
 
 fn db_to_amplitude(db: f32) -> f32 {
-    10.0_f32.powf(db * 0.05).min(f32::MAX)
+    libm::powf(10.0, db * 0.05).min(f32::MAX)
 }
 
 #[cfg(test)]

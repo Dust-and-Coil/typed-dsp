@@ -11,3 +11,6 @@ homepage = "https://github.com/Dust-and-Coil/typed-dsp"
 documentation = "https://docs.rs/typed-dsp"
 keywords = ["audio", "dsp", "decibels", "gain", "units"]
 categories = ["multimedia::audio"]
+
+[dependencies]
+libm = "=0.2.16"
