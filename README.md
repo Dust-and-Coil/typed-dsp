@@ -1,6 +1,6 @@
 # Typed DSP
 
-Strongly typed audio units for Rust DSP code, from Dust & Coil Audio Laboratories.
+Strongly typed audio units for Rust DSP code.
 
 | Type            | Represents                                         | Silence          |
 | --------------- | -------------------------------------------------- | ---------------- |
