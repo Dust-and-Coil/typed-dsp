@@ -9,6 +9,20 @@ Strongly typed audio units for Rust DSP code.
 | `LinearGain`    | A multiplier applied to a signal                   | `0.0`            |
 | `GainDb`        | A gain in decibels                                 | negative infinity |
 
+## Why two decibel types
+
+`LevelDbfs` is an absolute signal level. `GainDb` is a relative change in
+level. Both are in decibels, but mixing them up is a common bug, so the
+operators keep them apart:
+
+```text
+LevelDbfs - LevelDbfs -> GainDb
+LevelDbfs + GainDb    -> LevelDbfs
+GainDb    + GainDb    -> GainDb
+```
+
+Adding two levels doesn't compile.
+
 None of them can hold NaN or positive infinity, and the linear ones are
 never negative. `new` checks a raw number; in a `const` an invalid value is a
 build error.
