@@ -1,0 +1,28 @@
+name: Nim
+
+on:
+  push:
+    branches: [ "master" ]
+    paths:
+      - "nim/**"
+      - ".github/workflows/nim.yml"
+  pull_request:
+    branches: [ "master" ]
+    paths:
+      - "nim/**"
+      - ".github/workflows/nim.yml"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: nim
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: jiro4989/setup-nim-action@v2
+        with:
+          nim-version: "2.2.x"
+      - name: Test
+        run: nimble test -y
